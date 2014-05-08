@@ -1,0 +1,3 @@
+USER_HOME=$(eval echo ~${SUDO_USER})
+
+curl 'http://portal.oeconnection.com/LoginHandler.ashx' --data 'strGMWBXml=%3CLogin%3E%3CUserName%3E${USERNAME}%3C%2FUserName%3E%3CPassword%3E${PASSWORD}%3C%2FPassword%3E%3CLanguage%3Een%3C%2FLanguage%3E%3C%2FLogin%3E' --compressed -c ${USER_HOME}/.cookie.txt
