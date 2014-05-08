@@ -1,0 +1,4 @@
+#! /usr/bin/env bash
+
+source bin/nvm.sh
+nvm install 0.10.26
