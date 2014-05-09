@@ -3,7 +3,7 @@
 source bin/nvm.sh
 nvm use 0.10.26
 
-while true
+for (( ; ; ))
 do
 	exec node run.js
 	sleep 1
