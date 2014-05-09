@@ -5,6 +5,6 @@ nvm use 0.10.26
 
 for (( ; ; ))
 do
-	exec node run.js
-	sleep 1
+	node run.js
+	sleep .1
 done
