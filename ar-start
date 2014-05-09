@@ -1,10 +1,10 @@
 #! /usr/bin/env bash
 
 source bin/nvm.sh
-nvm use 0.10.10
+nvm use 0.10.26
 
 while true
 do
-	#exec node run.js
+	exec node run.js
 	sleep .1
 done
