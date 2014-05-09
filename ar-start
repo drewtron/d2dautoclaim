@@ -6,5 +6,5 @@ nvm use 0.10.26
 while true
 do
 	exec node run.js
-	sleep .1
+	sleep 1
 done
