@@ -9,3 +9,5 @@ make
 
 
 start_approuter https://github.com/drewtron/d2dautoclaim.git 8080 1
+
+update approuter to work for services
