@@ -31,12 +31,12 @@ exec('./get_uncommitted', function(error, stdout, stderr) {
 			if (parts_with_stop_sale[part.PartNo]){//The part has had a stop sale today, tell it not to remind us
 				exec('./decline_sale ' + part.ELLocID + ' ' + part.ELTransID, function(error, stdout, stderr) {
 					var message = { time: new Date(), part: part };
-					fs.appendFile(declined_file, JSON.stringify(message));
+					fs.appendFile(declined_file, JSON.stringify(message) + '\n');
 				});
 			} else {//Attempt to commit sale of part
 				exec('./commit_sale ' + part.ELLocID + ' ' + part.ELTransID, function(error, stdout, stderr) {
 					var message = { time: new Date(), part: part };
-					fs.appendFile(committed_file, JSON.stringify(message));
+					fs.appendFile(committed_file, JSON.stringify(message) + '\n');
 				});
 			}
 		});
