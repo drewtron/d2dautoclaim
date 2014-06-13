@@ -1,6 +1,7 @@
 #! /usr/bin/env bash
 #@ 0 * * * *
 
+source /home/ubuntu/.bashrc
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd $DIR
 cd ..
