@@ -8,7 +8,7 @@ var committed_file = process.env.HOME + '/committed.json';
 exec('./get_uncommitted', function(error, stdout, stderr) {
 
 	if (stdout.indexOf('401 - Unauthorized: Access is denied due to invalid credentials.') > -1){//unauthed
-		exec('./create_auth_cookie');
+		//exec('./create_auth_cookie');
 		return;
 	}
 
