@@ -5,5 +5,5 @@ curl 'http://portal.oeconnection.com/LoginHandler.ashx' --data "strGMWBXml=%3CLo
 if grep -Fxq "SuitesAuth" ${USER_HOME}/.new_cookie.txt; then
     mv ${USER_HOME}/.new_cookie.txt ${USER_HOME}/.cookie.txt
 else
-    # code if not found
+    touch badcookie
 fi
