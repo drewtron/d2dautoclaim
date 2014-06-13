@@ -1,4 +1,4 @@
-source /home/ubuntu/.bashrc
+#! /usr/bin/env bash
 
 USER_HOME=$(eval echo ~${SUDO_USER})
 
