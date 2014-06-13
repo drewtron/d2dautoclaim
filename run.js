@@ -4,8 +4,11 @@ var fs = require('fs');
 var parts_file = process.env.HOME + '/parts.json';
 var declined_file = process.env.HOME + '/declined.json';
 var committed_file = process.env.HOME + '/committed.json';
+var last_data_file = process.env.HOME + '/last_data_file.json';
 
 exec('./get_uncommitted', function(error, stdout, stderr) {
+	var message = { time: new Date(), data: data };
+	fs.writeFile(last_data_file, JSON.stringify(message, null, 4));
 
 	if (stdout.indexOf('401 - Unauthorized: Access is denied due to invalid credentials.') > -1){//unauthed
 		//exec('./create_auth_cookie');
